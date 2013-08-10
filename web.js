@@ -4,8 +4,8 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  var k = fs.readFileSync('./index.html')
-  response.send(k);  
+  fs.readFileSync('index.html')
+    
 });
 
 var port = process.env.PORT || 5000;
